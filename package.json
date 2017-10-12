@@ -1,7 +1,7 @@
 {
-  "name": "keycloak-connect-ipv6",
-  "version": "2.3.0",
-  "description": "Keycloak Connect Middleware,support ipv6 parsed.",
+  "name": "keycloak-connect230-ipv6",
+  "version": "1.0.0",
+  "description": "Keycloak Connect Middleware,support ipv6 parsed,based on adapter v2.3.0.",
   "homepage": "http://keycloak.org",
   "main": "index.js",
   "scripts": {
@@ -27,10 +27,7 @@
     "index.js",
     "uuid.js"
   ],
-  "author": {
-    "name": "Red Hat and Nokia, Inc.",
-    "url": "http://keycloak.org"
-  },
+  "author": "Red Hat and Nokia, Inc.",
   "license": "Apache-2.0",
   "dependencies": {
     "keycloak-auth-utils": "0.1.2"
@@ -51,5 +48,11 @@
     "type": "git",
     "url": "https://github.com/nokia/keycloak-nodejs-connect.git"
   },
-  "bugs": "https://github.com/keycloak/keycloak-nodejs-connect/issues"
+  "bugs": {
+    "url": "https://github.com/keycloak/keycloak-nodejs-connect/issues"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  }
 }
