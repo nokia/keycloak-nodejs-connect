@@ -14,7 +14,7 @@
  * the License.
  */
 'use strict';
-
+var getport = require('./getport');
 module.exports = function (keycloak, logoutUrl) {
   return function logout (request, response, next) {
     if (request.url !== logoutUrl) {
@@ -28,8 +28,7 @@ module.exports = function (keycloak, logoutUrl) {
     }
 
     let host = request.hostname;
-    let headerHost = request.headers.host.split(':');
-    let port = headerHost[1] || '';
+    let port = getport.result(request.headers.host) || ''; 
     let redirectUrl = request.protocol + '://' + host + (port === '' ? '' : ':' + port) + '/';
     let keycloakLogoutUrl = keycloak.logoutUrl(redirectUrl);
 
